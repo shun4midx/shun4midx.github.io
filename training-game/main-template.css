@@ -1,0 +1,49 @@
+/********************************************
+* Copyright (c) 2025 Shun/翔海 (@shun4midx) *
+* Project: School Project of Training Game *
+* File Type: CSS file for website          *
+* File: main-template.css                  *
+********************************************/
+
+/* Main settings */
+* {
+  margin: 0 3pt;
+  padding: 3pt;
+  font-family: var(--default-font);
+  font-weight: bold;
+  text-wrap: wrap;
+  word-wrap: break-word;
+  overflow-x: hidden;
+}
+
+/* Variables */
+:root {
+  --home-cursor: rgb(0, 0, 255);
+  --default-font: 'Optima';
+  --bg-color: rgb(177, 195, 239);
+  --text-color: rgb(0, 0, 0);
+  --button-text: rgb(255, 255, 255);
+  --header-clicked: rgb(119, 241, 243); 
+  --hamburger: "☰";
+}
+
+/* HTML and Body */
+html {
+  color: var(--text-color);
+  height: 100%;
+  overflow-y: hidden;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  background-color: var(--header-bg);
+}
+
+body {
+  background-attachment: fixed;
+  background-size: cover;
+  flex-direction: column;
+  margin: 0;
+  height: max-height;
+}

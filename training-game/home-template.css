@@ -1,0 +1,168 @@
+/********************************************
+* Copyright (c) 2025 Shun/翔海 (@shun4midx) *
+* Project: School Project of Training Game *
+* File Type: CSS file for website          *
+* File: home-template.css                  *
+********************************************/
+
+/* ======== HOME ======== */
+/* Different Headers */
+.HomeBodyWrap h1 {
+  font-size: 6em;
+  margin: 0;
+  padding: 7pt 2pt;
+  font-family: var(--default-font);
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+.HomeBodyWrap h2 {
+  font-family: var(--default-font);
+  font-size: 2.5em;
+  overflow: hidden;
+}
+
+@media (max-width: 1000px) {
+  .HomeBodyWrap h1 {
+    padding: 4pt 2pt;
+    font-size: 4em;
+  }
+
+  .HomeBodyWrap h2 {
+    font-size: 1.75em;
+  }
+}
+
+@media (max-width: 700px) {
+  .HomeBodyWrap h1 {
+    padding: 4pt 2pt;
+    font-size: 3em;
+  }
+
+  .HomeBodyWrap h2 {
+    font-size: 1.25em;
+  }
+}
+
+@media (max-width: 600px) {
+  .HomeBodyWrap h1 {
+    padding: 4pt 2pt;
+    font-size: 2em;
+  }
+
+  .HomeBodyWrap h2 {
+    font-size: 1em;
+  }
+}
+
+/* Main Home */
+.HomeBodyWrap {
+  height: 100%;
+  width: max-width;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  background-attachment: fixed;
+  background-position: center, center;
+  background-size: cover, auto;
+  background-blend-mode: multiply;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.HomeTitleWrap {
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.HomeTitle {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-family: var(--default-font);
+  animation: blink-home 1.0s step-end infinite; 
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.7vw solid var(--home-cursor);
+  overflow: hidden;
+  margin-bottom: 3em;
+}
+
+@media (max-width: 1000px) {
+  .HomeTitle {
+    margin-bottom: 2em;
+  }
+}
+
+@media (max-width: 700px) {
+  .HomeTitle {
+    margin-bottom: 1.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  .HomeTitle {
+    margin-bottom: 1em;
+  }
+}
+
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+  margin: auto;
+  padding: 0 10pt;
+  background-color: rgb(121, 123, 215);
+  font-family: var(--default-font);
+}
+
+.Button h1 {
+  color: var(--button-text);
+}
+  
+.ButtonSubtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+    
+@keyframes blink-home {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--home-cursor);
+  }
+}
+
+.HomeTitle a {
+  font-family: var(--default-font);
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+
+.HomeTitle a:hover {
+  font-family: var(--default-font);
+  color: var(--header-clicked);
+  text-decoration: none;
+  transition: color 0.3s;
+  padding: 0;
+  margin: 0;
+}
