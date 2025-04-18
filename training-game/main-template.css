@@ -53,11 +53,11 @@ body {
 
 /* Globe menu button */
 .MenuToggle {
-  position: fixed;
+  position: fixed !important;
   padding: 0;
   font-size: 3em;
-  top: 10px;
-  right: 10px;
+  top: 10px !important;
+  right: 10px !important;
   align-items: center;
   justify-content: center;
   text-align: center;
