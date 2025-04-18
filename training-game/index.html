@@ -15,11 +15,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>清福員工訓練遊戲</title>
   <link rel="stylesheet" href="main-template.css"/>
+  <link rel="stylesheet" href="button-template.css"/>
   <link rel="stylesheet" href="home-template.css"/>
 </head>
 
 <body>
   <div class="HomeBodyWrap">
+    <nav>
+      <div class="MenuToggle" onclick="toggleMenu()">
+        <span id="globe-text">🌐</span>
+      </div>
+    </nav>
+
     <div class="HomeBody">
       <div class="HomeTitleWrap">
         <div class="HomeTitle">
@@ -28,7 +35,7 @@
       </div>
 
       <div class="Button">
-        <h1>START!</h1>
+        <a href="game/" class="ButtonLink"><h1>START!</h1></a>
       </div>
 
       <div class="ButtonSubtitle">
@@ -42,6 +49,7 @@
   <script src="home-typewriter.js"></script>
   <script src="main-scripts/read-write-sheet.js"></script>
   <script src="main-scripts/dictionary.js"></script>
+  <script src="main-scripts/language-selection.js"></script>
 </body>
 
 </html>

@@ -119,20 +119,6 @@
   }
 }
 
-.Button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: fit-content;
-  margin: auto;
-  padding: 0 10pt;
-  background-color: rgb(121, 123, 215);
-  font-family: var(--default-font);
-}
-
-.Button h1 {
-  color: var(--button-text);
-}
   
 .ButtonSubtitle {
   display: flex;

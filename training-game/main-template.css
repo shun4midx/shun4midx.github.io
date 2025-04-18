@@ -9,6 +9,7 @@
 * {
   margin: 0 3pt;
   padding: 3pt;
+  box-sizing: border-box;
   font-family: var(--default-font);
   font-weight: bold;
   text-wrap: wrap;
@@ -23,8 +24,11 @@
   --bg-color: rgb(177, 195, 239);
   --text-color: rgb(0, 0, 0);
   --button-text: rgb(255, 255, 255);
-  --header-clicked: rgb(119, 241, 243); 
-  --hamburger: "☰";
+  --button-bg: rgb(121, 123, 215);
+  --button-clicked: rgb(56, 20, 163); 
+  --header-clicked: rgb(119, 241, 243);
+  --globe-bg: rgb(66, 68, 203);
+  --globe-hover-bg: rgb(25, 27, 143);
 }
 
 /* HTML and Body */
@@ -46,4 +50,38 @@ body {
   flex-direction: column;
   margin: 0;
   height: max-height;
+}
+
+/* Globe menu button */
+.MenuToggle {
+  position: fixed;
+  padding: 0;
+  font-size: 3em;
+  top: 10px;
+  right: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  z-index: 3000;
+  width: 1.25em;
+  height: 1.25em;
+  color: var(--header-text);
+  overflow: hidden;
+  background-color: var(--globe-bg);
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); */
+}
+
+.MenuToggle:hover {
+  background-color: var(--globe-hover-bg);
+  transition: 0.3s ease-in-out;
+}
+
+.MenuToggle span {
+  margin: 0;   /* Remove any margin for the text */
+  padding: 0;  /* Remove padding */
+  font-size: 0.9em;  /* Set size for the icon */
+  color: var(--header-text);  /* Set the text color */
 }

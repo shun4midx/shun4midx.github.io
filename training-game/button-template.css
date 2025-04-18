@@ -1,0 +1,58 @@
+/********************************************
+* Copyright (c) 2025 Shun/翔海 (@shun4midx) *
+* Project: School Project of Training Game *
+* File Type: CSS file for website          *
+* File: button-template.css                *
+********************************************/
+
+/* ======== BUTTONS ======== */
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 0 10pt;
+  background-color: var(--button-bg);
+  font-family: var(--default-font);
+  border-radius: 15px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+
+.Button h1 {
+  color: var(--button-text) !important;
+  width: auto;
+  text-decoration: none;
+}
+
+.Button:visited {
+  background-color: var(--button-bg);
+}
+
+.Button:hover {
+  background-color: var(--button-clicked);
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.Button:active {
+  background-color: var(--button-clicked);
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.ButtonLink {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+}
+
+.ButtonLink h1 {
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
