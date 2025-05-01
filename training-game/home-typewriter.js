@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     typeWriter();
   });
   
-  const textParts = ["歡迎來玩遊戲！", "Welcome to the game!", "Selamat datang!", "Chào mừng!", "Maligayang pagdating!"]; // Dynamic parts
+  const textParts = ["歡迎來玩遊戲！", "Welcome to the game!", "Chào mừng!", "Selamat datang!"]; // Dynamic parts
   const staticText = "‎"; // Static part that remains the same
   const element = document.getElementById("homescreen-text");
   
