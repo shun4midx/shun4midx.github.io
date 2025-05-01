@@ -32,12 +32,6 @@
   background-color: var(--button-bg);
 }
 
-.Button:active {
-  background-color: var(--button-clicked);
-  text-decoration: none;
-  transition: 0.3s ease-in-out;
-}
-
 .ButtonLink {
   text-decoration: none;
   display: flex;
@@ -58,11 +52,6 @@
   margin: 0;
   width: 100%;
   height: auto;
-}
-
-.ButtonLink span:active {
-  color: var(--button-hover-text);
-  transition: 0.3s ease-in-out;
 }
 
 .button-zh-tw {
