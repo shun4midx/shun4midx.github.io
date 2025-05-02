@@ -67,14 +67,14 @@
   background-color: var(--answer-bg);
   border-radius: 10px;
   border: 3px solid var(--answer-border);
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .AnswerOption:not(.selected):hover {
   background-color: var(--hover-answer-bg);
   border: 3px solid var(--hover-answer-bg);
   color: var(--hover-answer-text);
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   cursor: pointer;
 }
 
