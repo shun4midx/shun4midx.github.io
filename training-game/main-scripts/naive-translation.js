@@ -59,17 +59,20 @@ function setLanguage(lang) {
 
   // Remove all language classes from ButtonLink
   const buttonLink = document.querySelector(".ButtonLink");
-  buttonLink.classList.remove("button-zh-tw", "button-en", "button-vn", "button-id"); // Clear old classes
 
-  // Add the language-specific class
-  if (lang === "zh-tw") {
-    buttonLink.classList.add("button-zh-tw");
-  } else if (lang === "en") {
-    buttonLink.classList.add("button-en");
-  } else if (lang === "vn") {
-    buttonLink.classList.add("button-vn");
-  } else if (lang === "id") {
-    buttonLink.classList.add("button-id");
+  if (buttonLink) {
+    buttonLink.classList.remove("button-zh-tw", "button-en", "button-vn", "button-id"); // Clear old classes
+
+    // Add the language-specific class
+    if (lang === "zh-tw") {
+      buttonLink.classList.add("button-zh-tw");
+    } else if (lang === "en") {
+      buttonLink.classList.add("button-en");
+    } else if (lang === "vn") {
+      buttonLink.classList.add("button-vn");
+    } else if (lang === "id") {
+      buttonLink.classList.add("button-id");
+    }
   }
 }
 

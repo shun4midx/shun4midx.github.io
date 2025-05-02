@@ -33,8 +33,10 @@ function checkAnswer(selected) {
     feedback.style.color = "#155724";
     feedback.style.border = "2px solid #c3e6cb";
   } else {
-    wrongAnswerTranslation = getTranslation("wrongAnswer", lang);//`❌ 答錯了，正確答案是 ${correctAnswer} 喔～`;
-    feedback.textContent = wrongAnswerTranslation.replace("${correctAnswer}", correctAnswer);
+    let wrongAnswerTranslation = getTranslation("wrongAnswer", lang);//`❌ 答錯了，正確答案是 ${correctAnswer} 喔～`;
+    wrongAnswerTranslation = wrongAnswerTranslation.replace("${correctAnswer}", correctAnswer);
+    feedback.textContent = wrongAnswerTranslation;
+
     feedback.className = "FeedbackMessage";
     
     // feedback.style.backgroundColor = rootStyles.getPropertyValue("--wrong-bg").trim();
