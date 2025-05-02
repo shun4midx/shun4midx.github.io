@@ -33,6 +33,18 @@
   --language-container-bg: rgb(64, 66, 165);
   --language-hover-bg: rgb(112, 113, 209);
   --language-hover-text: rgb(192, 243, 253);
+  --question-border: rgb(70, 33, 158);
+  --question-img-shadow: rgba(20, 3, 87, 0.283);
+  --answer-border: rgb(79, 38, 175);
+  --answer-bg: rgb(226, 241, 244);
+  --hover-answer-bg: rgb(56, 20, 163); 
+  --hover-answer-text: rgb(192, 243, 253);
+  --correct-bg: "#d4edda";
+  --correct-color: "#155724";
+  --correct-border: "2px solid #c3e6cb";
+  --wrong-bg: "#f8d7da";
+  --wrong-color: "#721c24";
+  --wrong-border: "2px solid #f5c6cb";
 }
 
 /* HTML and Body */

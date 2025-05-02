@@ -1,0 +1,90 @@
+/********************************************
+* Copyright (c) 2025 Shun/翔海 (@shun4midx) *
+* Project: School Project of Training Game *
+* File Type: CSS file for website          *
+* File: game-template.css                  *
+********************************************/
+
+/* Styling for the Game Content */
+.GameBodyWrap {
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: max-width;
+  position: fixed;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.GameBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7vh;
+}
+
+/* Styling for the Game Image */
+.GameImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.GameImage img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--question-img-shadow);
+  margin-bottom: 15px;
+  width: min(500px, 90%);
+}
+
+/* Styling for Question */
+.Question {
+  margin-bottom: 10px;
+}
+
+/* Styling for the Answer Options */
+.Answers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.AnswerOption {
+  font-size: 1.5em;
+  padding: 10px 20px;
+  background-color: var(--answer-bg);
+  border-radius: 10px;
+  border: 3px solid var(--answer-border);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.AnswerOption:hover {
+  background-color: var(--hover-answer-bg);
+  border: 3px solid var(--hover-answer-bg);
+  color: var(--hover-answer-text);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Answer feedback */
+#feedback {
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.FeedbackMessage {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 20px;
+  border-radius: 12px;
+  display: inline-block;
+  max-width: 100%;
+}

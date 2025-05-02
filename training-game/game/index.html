@@ -14,12 +14,56 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>清福員工訓練遊戲</title>
-  <link rel="stylesheet" href="main-template.css"/>
+  <link rel="stylesheet" href="../main-template.css"/> <!-- Includes the language customization in the corner, probably would include login functionality later too -->
+  <link rel="stylesheet" href="game-template.css"/>
 </head>
 
 <body>
-  <h1>還沒有遊戲介面（拍謝qwq）</h1>
+  <div class="GameBodyWrap">
+    <div class="MenuToggle" onclick="toggleMenu()">
+      <span id="globe-text">🌐</span>
+    </div>
+    <!-- Language selection container -->
+    <div class="LanguageContainer">
+      <div class="language-zh-tw" onclick="setLanguage('zh-tw')">正體中文</div>
+      <div class="language-abc" onclick="setLanguage('en')">English</div>
+      <div class="language-abc" onclick="setLanguage('vn')">Tiếng Việt</div>
+      <div class="language-abc" onclick="setLanguage('id')">Bahasa Indonesia</div>
+    </div>
+
+    <div class="GameBody">
+      <!-- Game Content (Image + Answers) -->
+      <div class="GameContent">
+        <!-- Display the question image -->
+        <div class="GameImage">
+          <img src="https://i.postimg.cc/B6NZGPzF/sample.png" alt="Question Image" width="300"/>
+        </div>
+
+        <!-- Display question -->
+        <div class="Question">
+          <h1 data-key="sampleQuestion">台灣的長輩在養老院常說「阿嬤肚子痛」，你應該怎麼做？</h1>
+        </div>
+
+        <!-- Answers Section -->
+        <div class="Answers">
+          <div id="feedback" class="FeedbackMessage"></div>
+
+          <div class="AnswerOption" onclick="checkAnswer('A')" data-key="sampleA">A. 請長輩多喝開水</div>
+          <div class="AnswerOption" onclick="checkAnswer('B')" data-key="sampleB">B. 把事情記起來等下班再說</div>
+          <div class="AnswerOption" onclick="checkAnswer('C')" data-key="sampleC">C. 通知護理人員或醫護相關人員</div>
+          <div class="AnswerOption" onclick="checkAnswer('D')" data-key="sampleD">D. 告訴他：「你只是想家啦！」。</div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- ======== SCRIPTS ======== -->
+  <!-- Main Background Scripts -->
+  <script src="../main-scripts/read-write-sheet.js"></script>
+  <script src="../main-scripts/language-selection.js"></script>
+  <script src="../main-scripts/naive-translation.js"></script>
+
+  <!-- Game Scripts -->
+  <script src="validate-answer.js"></script>
 </body>
 
 </html>
