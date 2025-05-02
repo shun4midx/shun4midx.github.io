@@ -16,7 +16,8 @@ const translations = {
     sampleC: "C. 通知護理人員或醫護相關人員",
     sampleD: "D. 告訴她：「你只是想家啦！」。",
     correctAnswer: "✅ 正確！",
-    wrongAnswer: "❌ 答錯了，正確答案是 ${correctAnswer} 喔～"
+    wrongAnswer: "❌ 答錯了，正確答案是 ${correctAnswer} 喔～",
+    nextQuestion: "下一題"
   },
   "en": {
     start: "START!",
@@ -27,7 +28,8 @@ const translations = {
     sampleC: "C. Notify nursing or medical personnel",
     sampleD: `D. Tell her: "You just miss home!"`,
     correctAnswer: "✅ Correct!",
-    wrongAnswer: "❌ That's wrong, the correct answer is ${correctAnswer}!"
+    wrongAnswer: "❌ That's wrong, the correct answer is ${correctAnswer}!",
+    nextQuestion: "Next Question"
   },
   "vn": {
     start: "BẮT ĐẦU!",
@@ -38,7 +40,8 @@ const translations = {
     sampleC: "C. Thông báo cho nhân viên y tế hoặc y tá",
     sampleD: `D. Nói với bà ấy: "Bà chỉ nhớ nhà thôi!"`,
     correctAnswer: "✅ Đúng rồi!",
-    wrongAnswer: "❌ Sai rồi, câu trả lời đúng là ${correctAnswer}!"
+    wrongAnswer: "❌ Sai rồi, câu trả lời đúng là ${correctAnswer}!",
+    nextQuestion: "Câu Hỏi Tiếp Theo"
   },
   "id": {
     start: "MULAI!",
@@ -49,7 +52,8 @@ const translations = {
     sampleC: "C. Beri tahu staf perawatan atau medis",
     sampleD: `D. Katakan padanya: "Kamu hanya merindukan rumah!"`,
     correctAnswer: "✅ Benar!",
-    wrongAnswer: "❌ Itu salah, jawaban yang benar adalah ${correctAnswer}!"
+    wrongAnswer: "❌ Itu salah, jawaban yang benar adalah ${correctAnswer}!",
+    nextQuestion: "Pertanyaan Berikutnya"
   }
 };
 
