@@ -51,7 +51,6 @@
 html {
   color: var(--text-color);
   height: 100%;
-  overflow-y: auto;
   left: 0;
   right: 0;
   margin: 0;
@@ -65,7 +64,6 @@ body {
   flex-direction: column;
   margin: 0;
   height: max-height;
-  overflow-y: auto;
 }
 
 /* Top row */
