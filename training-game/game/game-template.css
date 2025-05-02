@@ -12,7 +12,7 @@
   right: 0;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 100dvh;
   width: max-width;
   position: fixed;
   background-color: var(--bg-color);
