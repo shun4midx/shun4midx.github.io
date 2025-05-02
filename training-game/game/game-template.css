@@ -28,9 +28,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 7vh;
+  margin-top: 4vh;
   height: auto;
   overflow: visible;
+  width: min(900px, 100%);
 }
 
 /* Styling for the Game Image */
@@ -74,6 +75,7 @@
   border: 3px solid var(--hover-answer-bg);
   color: var(--hover-answer-text);
   transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 /* Answer feedback */
@@ -83,7 +85,7 @@
 }
 
 .FeedbackMessage {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 1.5em;
   font-weight: bold;
   text-align: center;
@@ -91,4 +93,22 @@
   border-radius: 12px;
   display: inline-block;
   max-width: 100%;
+}
+
+.ContinueButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ContinueButton:hover {
+  background-color: var(--button-clicked);
+  color: var(--button-hover-text);
+  transition: background-color 0.3s ease;
 }

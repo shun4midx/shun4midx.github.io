@@ -20,9 +20,13 @@
 
 <body>
   <div class="GameBodyWrap">
-    <div class="MenuToggle" onclick="toggleMenu()">
-      <span id="globe-text">🌐</span>
+    <div class="HeaderButtons">
+      <a href=".." class="HomeButton">🏠</a>
+      <div class="MenuToggle" onclick="toggleMenu()">
+        <span id="globe-text">🌐</span>
+      </div>
     </div>
+
     <!-- Language selection container -->
     <div class="LanguageContainer">
       <div class="language-zh-tw" onclick="setLanguage('zh-tw')">正體中文</div>
@@ -52,6 +56,9 @@
           <div class="AnswerOption" onclick="checkAnswer('B')" data-key="sampleB">B. 把事情記起來等下班再說</div>
           <div class="AnswerOption" onclick="checkAnswer('C')" data-key="sampleC">C. 通知護理人員或醫護相關人員</div>
           <div class="AnswerOption" onclick="checkAnswer('D')" data-key="sampleD">D. 告訴他：「你只是想家啦！」。</div>
+
+          <!-- Continue Button (initially hidden) -->
+          <button id="continue-button" class="ContinueButton" style="display: none;" onclick="nextQuestion()">下一題</button>
         </div>
       </div>
     </div>

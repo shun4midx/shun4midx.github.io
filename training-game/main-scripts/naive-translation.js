@@ -74,6 +74,11 @@ function setLanguage(lang) {
       buttonLink.classList.add("button-id");
     }
   }
+
+  // Rerun checkAnswer if there was a previous selection
+  if (lastSelectedAnswer) {
+    checkAnswer(lastSelectedAnswer);
+  }
 }
 
 function applyLanguage(lang) {

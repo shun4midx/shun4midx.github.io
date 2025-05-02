@@ -6,17 +6,19 @@
 ********************************************/
 
 // Validates the correct answer (huge simplification as of right now, this is just to demonstrate the sample)
-const correctAnswer = 'C';
-
 function checkAnswer(selected) {
+  lastSelectedAnswer = selected;
   const feedback = document.getElementById('feedback');
+  const continueButton = document.getElementById('continue-button');
   const rootStyles = getComputedStyle(document.documentElement);
+  const correctAnswer = 'C';
 
   // Get the language from localStorage (or default to 'zh-tw' if not set)
   const lang = localStorage.getItem("language") || "zh-tw";
 
   // Show it visibly and allow it to take up space
   feedback.style.display = "inline-block";
+  continueButton.style.display = "inline-block";
 
   if (selected === correctAnswer) {
     feedback.textContent = getTranslation("correctAnswer", lang); //"✅ 正確！";
@@ -50,4 +52,10 @@ function checkAnswer(selected) {
     feedback.style.color = "#721c24";
     feedback.style.border = "2px solid #f5c6cb";
   }
+}
+
+// Placeholder, may move to different file
+function nextQuestion() {
+  alert("Next question coming soon!");
+  // Could reset the UI here or load the next question dynamically
 }
