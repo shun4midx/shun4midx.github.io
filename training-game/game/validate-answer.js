@@ -16,6 +16,18 @@ function checkAnswer(selected) {
   // Get the language from localStorage (or default to 'zh-tw' if not set)
   const lang = localStorage.getItem("language") || "zh-tw";
 
+  // Deselect all first
+  document.querySelectorAll('.AnswerOption').forEach(option => {
+    option.classList.remove('selected');
+    option.style.pointerEvents = 'none'; // disables further clicking
+  });
+
+  // Add selected class to the clicked one
+  const selectedOption = document.querySelector(`.AnswerOption[onclick*="${selected}"]`);
+  if (selectedOption) {
+    selectedOption.classList.add('selected');
+  }
+
   // Show it visibly and allow it to take up space
   feedback.style.display = "inline-block";
   continueButton.style.display = "inline-block";
@@ -56,6 +68,26 @@ function checkAnswer(selected) {
 
 // Placeholder, may move to different file
 function nextQuestion() {
-  alert("Next question coming soon!");
+  const options = document.querySelectorAll(".AnswerOption");
+
+  options.forEach(option => {
+    // Temporarily disable transition
+    option.style.transition = "none";
+    option.classList.remove("selected");
+    option.style.pointerEvents = "auto"; // Re-enable clicking
+
+    // Force reflow to apply transition reset
+    void option.offsetWidth;
+
+    // Restore the original transition
+    option.style.transition = "background-color 0.3s ease-in-out";
+  });
+
+  // Hide feedback and continue button
+  document.getElementById("feedback").style.display = "none";
+  document.getElementById("continue-button").style.display = "none";
+
   // Could reset the UI here or load the next question dynamically
+  // For now, just simulate resetting the state
+  alert("Next question coming soon!");
 }

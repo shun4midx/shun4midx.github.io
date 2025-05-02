@@ -28,7 +28,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 4vh;
+  margin-top: 7vh;
   height: auto;
   overflow: visible;
   width: min(900px, 100%);
@@ -70,12 +70,18 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-.AnswerOption:hover {
+.AnswerOption:not(.selected):hover {
   background-color: var(--hover-answer-bg);
   border: 3px solid var(--hover-answer-bg);
   color: var(--hover-answer-text);
   transition: background-color 0.3s ease-in-out;
   cursor: pointer;
+}
+
+.AnswerOption.selected {
+  background-color: var(--hover-answer-bg);
+  border: 3px solid var(--hover-answer-bg);
+  color: var(--hover-answer-text);
 }
 
 /* Answer feedback */
@@ -97,6 +103,7 @@
 
 .ContinueButton {
   margin-top: 10px;
+  margin-bottom: 10px;
   padding: 10px 20px;
   font-size: 1.2em;
   background-color: var(--button-bg);
@@ -104,11 +111,31 @@
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.15s ease-in-out;
 }
 
 .ContinueButton:hover {
   background-color: var(--button-clicked);
   color: var(--button-hover-text);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.15s ease-in-out;
+}
+
+/* Scrollbar */
+/* WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar);
+  border: none; /* No spacing around */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-hover);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track);
+  border: none;
 }
