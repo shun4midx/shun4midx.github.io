@@ -146,11 +146,13 @@
   margin: 0;
 }
 
-.HomeTitle a:hover {
-  font-family: var(--default-font);
-  color: var(--header-clicked);
-  text-decoration: none;
-  transition: color 0.3s;
-  padding: 0;
-  margin: 0;
+@media(hover:hover) {
+  .HomeTitle a:hover {
+    font-family: var(--default-font);
+    color: var(--header-clicked);
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 0;
+    margin: 0;
+  }
 }

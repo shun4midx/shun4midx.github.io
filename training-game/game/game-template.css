@@ -70,12 +70,14 @@
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.AnswerOption:not(.selected):hover {
-  background-color: var(--hover-answer-bg);
-  border: 3px solid var(--hover-answer-bg);
-  color: var(--hover-answer-text);
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  cursor: pointer;
+@media (hover:hover) {
+  .AnswerOption:not(.selected):hover {
+    background-color: var(--hover-answer-bg);
+    border: 3px solid var(--hover-answer-bg);
+    color: var(--hover-answer-text);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    cursor: pointer;
+  }
 }
 
 .AnswerOption.selected {
@@ -114,10 +116,12 @@
   transition: background-color 0.15s ease-in-out;
 }
 
-.ContinueButton:hover {
-  background-color: var(--button-clicked);
-  color: var(--button-hover-text);
-  transition: background-color 0.15s ease-in-out;
+@media (hover:hover) {
+  .ContinueButton:hover {
+    background-color: var(--button-clicked);
+    color: var(--button-hover-text);
+    transition: background-color 0.15s ease-in-out;
+  }
 }
 
 /* Scrollbar */
