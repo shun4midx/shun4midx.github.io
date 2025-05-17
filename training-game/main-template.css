@@ -17,6 +17,13 @@
   overflow-x: hidden;
 }
 
+/* Forcefully prevent hover styling on devices that don't hover */
+.no-hover .button:hover {
+  background: inherit !important;
+  color: inherit !important;
+  cursor: default !important;
+}
+
 /* Variables */
 :root {
   --home-cursor: rgb(0, 0, 255);
