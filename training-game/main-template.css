@@ -19,7 +19,7 @@
 
 @media (hover: none) {
   *:hover {
-    pointer-events: none; /* Disable hover interactions */
+    /* pointer-events: none; */
     background-color: inherit;
     color: inherit;
   }
