@@ -40,22 +40,22 @@
       <div class="GameContent">
         <!-- Display the question image -->
         <div class="GameImage">
-          <img src="https://i.postimg.cc/B6NZGPzF/sample.png" alt="Question Image" width="300"/>
+          <img src="" width="300"/>
         </div>
 
         <!-- Display question -->
         <div class="Question">
-          <h1 data-key="sampleQuestion">台灣的長輩在養老院常說「阿嬤肚子痛」，你應該怎麼做？</h1>
+          <h1 question-key="questionText"></h1>
         </div>
 
         <!-- Answers Section -->
         <div class="Answers">
           <div id="feedback" class="FeedbackMessage"></div>
 
-          <div class="AnswerOption" onclick="checkAnswer('A')" data-key="sampleA">A. 請長輩多喝開水</div>
-          <div class="AnswerOption" onclick="checkAnswer('B')" data-key="sampleB">B. 把事情記起來等下班再說</div>
-          <div class="AnswerOption" onclick="checkAnswer('C')" data-key="sampleC">C. 通知護理人員或醫護相關人員</div>
-          <div class="AnswerOption" onclick="checkAnswer('D')" data-key="sampleD">D. 告訴他：「你只是想家啦！」。</div>
+          <div class="AnswerOption" onclick="checkAnswer('A')" question-key="answerA"></div>
+          <div class="AnswerOption" onclick="checkAnswer('B')" question-key="answerB"></div>
+          <div class="AnswerOption" onclick="checkAnswer('C')" question-key="answerC"></div>
+          <div class="AnswerOption" onclick="checkAnswer('D')" question-key="answerD"></div>
 
           <!-- Continue Button (initially hidden) -->
           <button id="continue-button" class="ContinueButton" style="display: none;" onclick="nextQuestion()" data-key="nextQuestion">下一題</button>
@@ -67,10 +67,12 @@
   <!-- Main Background Scripts -->
   <script src="../main-scripts/read-write-sheet.js"></script>
   <script src="../main-scripts/language-selection.js"></script>
-  <script src="../main-scripts/naive-translation.js"></script>
+  <script type="module" src="../main-scripts/naive-translation.js"></script>
 
   <!-- Game Scripts -->
-  <script src="validate-answer.js?v=1"></script>
+  <script type="module" src="question-navigation.js"></script>
+  <script type="module" src="validate-answer.js"></script>
+  <script type="module" src="display-question.js"></script>
 </body>
 
 </html>
