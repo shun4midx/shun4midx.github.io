@@ -16,16 +16,26 @@ export function updateQuestionUI() {
   // Get the user's `selected` language (default to 'zh-tw')
   const lang = localStorage.getItem("language") || "zh-tw";
 
+  // Hide the question and options until the image loads
+  const questionElement = document.querySelector("[question-key='questionText']");
+  const answersContainer = document.querySelector(".Answers");
+  questionElement.style.visibility = "hidden";
+  answersContainer.style.visibility = "hidden";
+  
   // Update the question image
   const imageElement = document.querySelector(".GameImage img");
+  imageElement.style.visibility = "hidden"; // Hide the image initially
+  imageElement.onload = () => {
+    imageElement.style.visibility = "visible"; // Show the image once it has loaded
+    questionElement.style.visibility = "visible";
+    answersContainer.style.visibility = "visible";
+  };
   imageElement.src = currQuestion.image;
 
   // Update the question text
-  const questionElement = document.querySelector("[question-key='questionText']");
   questionElement.textContent = currQuestion.question[lang];
 
   // Update the answers
-  const answersContainer = document.querySelector(".Answers");
   if (answersContainer) {
     answersContainer.innerHTML = ""; // Clear existing answers
 
