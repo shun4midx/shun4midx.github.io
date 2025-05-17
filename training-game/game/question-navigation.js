@@ -1000,4 +1000,8 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("curr_level", JSON.stringify(1));
     genQuestionOrder();
   }
+  console.log("curr_order_idx:", localStorage.getItem("curr_order_idx"));
+  console.log("curr_level:", localStorage.getItem("curr_level"));
+  console.log("question_order:", localStorage.getItem("question_order"));
+  console.log("chose_order:", localStorage.getItem("chose_order"));
 });
