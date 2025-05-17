@@ -16,6 +16,13 @@ export function updateQuestionUI() {
   // Get the user's `selected` language (default to 'zh-tw')
   const lang = localStorage.getItem("language") || "zh-tw";
 
+  // Reset focus to prevent hover-like behavior
+  document.activeElement.blur();
+
+  // Reset hover states (if necessary)
+  const hoveredElements = document.querySelectorAll(":hover");
+  hoveredElements.forEach((el) => el.classList.remove("hover"));
+
   // Hide the question and options until the image loads
   const questionElement = document.querySelector("[question-key='questionText']");
   const answersContainer = document.querySelector(".Answers");
