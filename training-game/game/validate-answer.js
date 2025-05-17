@@ -9,11 +9,11 @@ import { questions, genQuestionOrder } from './question-navigation.js';
 import { getTranslation } from '../main-scripts/naive-translation.js';
 import { updateQuestionUI } from './display-question.js';
 
-window.lastSelectedAnswer; // Declare the variable
+export let lastSelectedAnswer; // Declare the variable
 
 // Validates the correct answer (huge simplification as of right now, this is just to demonstrate the sample)
 function checkAnswer(selected) {
-  window.lastSelectedAnswer = selected;
+  lastSelectedAnswer = selected;
   const feedback = document.getElementById('feedback');
   const continueButton = document.getElementById('continue-button');
 
@@ -115,7 +115,7 @@ function nextQuestion() {
   document.getElementById("continue-button").style.display = "none";
 
   // Reset the last selected answer
-  window.lastSelectedAnswer = null;
+  lastSelectedAnswer = null;
 }
 
 // Window

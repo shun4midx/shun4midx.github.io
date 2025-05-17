@@ -6,6 +6,7 @@
 ********************************************/
 
 import { questions } from '../game/question-navigation.js'; // Question updating
+import { lastSelectedAnswer } from '../game/validate-answer.js';
 
 // Need some naïve translations in case it fails, but we rely on translation.js later more which reads from Spreadsheet API
 export const translations = {
@@ -65,8 +66,8 @@ function setLanguage(lang) {
   updateQuestionLang(lang);
 
   // Rerun checkAnswer if there was a previous selection
-  if (window.lastSelectedAnswer) {
-    checkAnswer(window.lastSelectedAnswer);
+  if (lastSelectedAnswer) {
+    checkAnswer(lastSelectedAnswer);
   }
 }
 
