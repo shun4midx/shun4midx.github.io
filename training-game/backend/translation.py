@@ -14,13 +14,13 @@ async def translateText(zh_tw_phrase):
         vn_trans = await translator.translate(zh_tw_phrase, dest='vi')
         id_trans = await translator.translate(zh_tw_phrase, dest='id')
 
-        if not en_trans.text[0].isupper():
+        if not en_trans.text[0].isupper() and not en_trans.text[0] == "<":
             en_trans.text = en_trans.text.capitalize()
 
-        if not vn_trans.text[0].isupper():
+        if not vn_trans.text[0].isupper() and not vn_trans.text[0] == "<":
             vn_trans.text = vn_trans.text.capitalize()
 
-        if not id_trans.text[0].isupper():
+        if not id_trans.text[0].isupper() and not id_trans.text[0] == "<":
             id_trans.text = id_trans.text.capitalize()
 
         return f"英文: {en_trans.text}\n越南文: {vn_trans.text}\n印尼文: {id_trans.text}\n"
@@ -36,13 +36,13 @@ async def translateJSON(zh_tw_json):
         vn_trans = await translator.translate(zh_tw_phrase, dest='vi')
         id_trans = await translator.translate(zh_tw_phrase, dest='id')
 
-        if not en_trans.text[0].isupper():
+        if not en_trans.text[0].isupper() and not en_trans.text[0] == "<":
             en_trans.text = en_trans.text.capitalize()
 
-        if not vn_trans.text[0].isupper():
+        if not vn_trans.text[0].isupper() and not vn_trans.text[0] == "<":
             vn_trans.text = vn_trans.text.capitalize()
 
-        if not id_trans.text[0].isupper():
+        if not id_trans.text[0].isupper() and not id_trans.text[0] == "<":
             id_trans.text = id_trans.text.capitalize()
 
         return f'''{zh_tw_json},\n"en": "{en_trans.text}",\n"vn": "{vn_trans.text}",\n"id": "{id_trans.text}"\n'''

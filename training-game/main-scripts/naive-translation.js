@@ -88,7 +88,7 @@ function updateQuestionLang(lang) {
   // Update the question text
   const questionElement = document.querySelector("[question-key='questionText']");
   if (questionElement) {
-    questionElement.textContent = currQuestion.question[lang];
+    questionElement.innerHTML = currQuestion.question[lang];
   }
 
   // Update the answer options

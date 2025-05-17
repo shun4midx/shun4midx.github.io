@@ -45,7 +45,7 @@ export function updateQuestionUI() {
   }
 
   // Update the question text
-  questionElement.textContent = currQuestion.question[lang];
+  questionElement.innerHTML = currQuestion.question[lang];
 
   // Update the answers
   if (answersContainer) {
