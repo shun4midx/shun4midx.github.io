@@ -485,19 +485,19 @@ export const questions = [
     },
     answers: {
       'A': {
-        "zh-tw": "",
+        "zh-tw": "請選擇非中文的語言",
         "en": "Crutch",
         "vn": "Nạng",
         "id": "Kruk"
       },
       'B': {
-        "zh-tw": "",
+        "zh-tw": "請選擇非中文的語言",
         "en": "Wooden stick",
         "vn": "Thanh gỗ",
         "id": "Tongkat kayu"
       },
       'C': {
-        "zh-tw": "",
+        "zh-tw": "請選擇非中文的語言",
         "en": "Magic wand",
         "vn": "Cây đũa thần",
         "id": "Tongkat ajaib"
@@ -516,19 +516,19 @@ export const questions = [
     },
     answers: {
       'A': {
-        "zh-tw": "",
+        "zh-tw": "請選擇非中文的語言",
         "en": "Chair",
         "vn": "Chủ tịch",
         "id": "Kursi"
       },
       'B': {
-        "zh-tw": "",
+        "zh-tw": "請選擇非中文的語言",
         "en": "Electric chair",
         "vn": "Ghế điện",
         "id": "Kursi listrik"
       },
       'C': {
-        "zh-tw": "",
+        "zh-tw": "請選擇非中文的語言",
         "en": "Wheelchair",
         "vn": "Xe lăn",
         "id": "Kursi roda"
@@ -547,19 +547,19 @@ export const questions = [
     },
     answers: {
       'A': {
-        "zh-tw": "",
+        "zh-tw": "請選擇非中文的語言",
         "en": "Bath",
         "vn": "Bồn tắm",
         "id": "Mandi"
       },
       'B': {
-        "zh-tw": "",
+        "zh-tw": "請選擇非中文的語言",
         "en": "Car wash",
         "vn": "Rửa xe",
         "id": "Tempat cuci mobil"
       },
       'C': {
-        "zh-tw": "",
+        "zh-tw": "請選擇非中文的語言",
         "en": "Bathroom",
         "vn": "Phòng tắm",
         "id": "Kamar mandi"
@@ -578,19 +578,19 @@ export const questions = [
     },
     answers: {
       'A': {
-        "zh-tw": "",
+        "zh-tw": "請選擇非中文的語言",
         "en": "Photographer",
         "vn": "Nhiếp ảnh gia",
         "id": "Fotografer"
       },
       'B': {
-        "zh-tw": "",
+        "zh-tw": "請選擇非中文的語言",
         "en": "Engineer",
         "vn": "Kỹ sư",
         "id": "Insinyur"
       },
       'C': {
-        "zh-tw": "",
+        "zh-tw": "請選擇非中文的語言",
         "en": "Caregiver",
         "vn": "Người chăm sóc",
         "id": "Pengasuh"
@@ -609,19 +609,19 @@ export const questions = [
     },
     answers: {
       'A': {
-        "zh-tw": "",
+        "zh-tw": "請選擇非中文的語言",
         "en": "Eat candy",
         "vn": "Ăn kẹo",
         "id": "Makan permen"
       },
       'B': {
-        "zh-tw": "",
+        "zh-tw": "請選擇非中文的語言",
         "en": "Take medicine",
         "vn": "Uống thuốc",
         "id": "Meminum obat"
       },
       'C': {
-        "zh-tw": "",
+        "zh-tw": "請選擇非中文的語言",
         "en": "Eat hot pot",
         "vn": "Ăn nồi nóng",
         "id": "Makan pot panas"

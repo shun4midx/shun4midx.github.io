@@ -19,18 +19,30 @@ export function updateQuestionUI() {
   // Hide the question and options until the image loads
   const questionElement = document.querySelector("[question-key='questionText']");
   const answersContainer = document.querySelector(".Answers");
-  questionElement.style.visibility = "hidden";
-  answersContainer.style.visibility = "hidden";
+  // questionElement.style.visibility = "hidden";
+  // answersContainer.style.visibility = "hidden";
   
   // Update the question image
   const imageElement = document.querySelector(".GameImage img");
-  imageElement.style.visibility = "hidden"; // Hide the image initially
-  imageElement.onload = () => {
-    imageElement.style.visibility = "visible"; // Show the image once it has loaded
+  localStorage.setItem("img elem", JSON.stringify(imageElement.getAttribute("src")));
+  // Check if the question has an image
+  if (currQuestion.image && currQuestion.image.trim() !== "") {
+    // If an image exists, load it
+    imageElement.style.display = "inline";
+    imageElement.style.visibility = "hidden"; // Hide the image initially
+    imageElement.onload = () => {
+      // Show everything once the image has loaded
+      imageElement.style.visibility = "visible";
+      questionElement.style.visibility = "visible";
+      answersContainer.style.visibility = "visible";
+    };
+    imageElement.src = currQuestion.image; // Set the image source
+  } else {
+    // If no image exists, skip the image logic and show the question and options
+    imageElement.style.display = "none"; // Ensure the image is hidden
     questionElement.style.visibility = "visible";
     answersContainer.style.visibility = "visible";
-  };
-  imageElement.src = currQuestion.image;
+  }
 
   // Update the question text
   questionElement.textContent = currQuestion.question[lang];
