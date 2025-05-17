@@ -17,6 +17,14 @@
   overflow-x: hidden;
 }
 
+@media (hover: none) {
+  *:hover {
+    pointer-events: none; /* Disable hover interactions */
+    background-color: inherit;
+    color: inherit;
+  }
+}
+
 /* Variables */
 :root {
   --home-cursor: rgb(0, 0, 255);

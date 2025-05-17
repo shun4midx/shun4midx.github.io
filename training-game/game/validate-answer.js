@@ -86,7 +86,6 @@ function nextQuestion() {
         alert("Anda menyelesaikan permainan, kami akan mulai lagi!");
       }
 
-
       localStorage.setItem("curr_order_idx", JSON.stringify(0));
       localStorage.setItem("curr_level", JSON.stringify(1));
       genQuestionOrder();

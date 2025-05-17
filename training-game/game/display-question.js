@@ -19,9 +19,16 @@ export function updateQuestionUI() {
   // Reset focus to prevent hover-like behavior
   document.activeElement.blur();
 
-  // Reset hover states (if necessary)
+  // Reset hover states
   const hoveredElements = document.querySelectorAll(":hover");
   hoveredElements.forEach((el) => el.classList.remove("hover"));
+
+  // Temporarily disable pointer events
+  const body = document.body;
+  body.style.pointerEvents = "none";
+  setTimeout(() => {
+    body.style.pointerEvents = "auto";
+  }, 300);
 
   // Hide the question and options until the image loads
   const questionElement = document.querySelector("[question-key='questionText']");
