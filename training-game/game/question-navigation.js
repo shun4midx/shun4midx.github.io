@@ -224,254 +224,254 @@ export const questions = [
     },
     answer: 'C'
   },
-  // {
-  //   image: "https://i.postimg.cc/m2cs3H8H/Chat-GPT-Image-2025-5-9-11-40-55.png",
-  //   level: 1,
-  //   question: {
-  //     "zh-tw": "這是什麼？",
-  //     "en": "What is this?",
-  //     "vn": "Đây là cái gì?",
-  //     "id": "Apa ini?"
-  //   },
-  //   answers: {
-  //     'A': {
-  //       "zh-tw": "家屬",
-  //       "en": "Family members",
-  //       "vn": "Thành viên gia đình",
-  //       "id": "Anggota keluarga"    
-  //     },
-  //     'B': {
-  //       "zh-tw": "家禽",
-  //       "en": "Poultry",
-  //       "vn": "Gia cầm",
-  //       "id": "Unggas"
-  //     },
-  //     'C': {
-  //       "zh-tw": "綁架",
-  //       "en": "Kidnapping",
-  //       "vn": "Bắt cóc",
-  //       "id": "Penculikan"
-  //     }
-  //   },
-  //   answer: 'A'
-  // },
-  // {
-  //   image: "https://i.postimg.cc/SKR3q03z/Chat-GPT-Image-May-9-2025-11-48-52-AM.png",
-  //   level: 1,
-  //   question: {
-  //     "zh-tw": "這是什麼？",
-  //     "en": "What is this?",
-  //     "vn": "Đây là cái gì?",
-  //     "id": "Apa ini?"
-  //   },
-  //   answers: {
-  //     'A': {
-  //       "zh-tw": "復健",
-  //       "en": "Rehabilitation",
-  //       "vn": "Phục hồi chức năng",
-  //       "id": "Rehabilitasi"    
-  //     },
-  //     'B': {
-  //       "zh-tw": "量血壓",
-  //       "en": "Measure blood pressure",
-  //       "vn": "Đo huyết áp",
-  //       "id": "Ukur tekanan darah"
-  //     },
-  //     'C': {
-  //       "zh-tw": "輸血",
-  //       "en": "Blood transfusion",
-  //       "vn": "Truyền máu",
-  //       "id": "Transfusi darah"
-  //     }
-  //   },
-  //   answer: 'B'
-  // },
-  // {
-  //   image: "https://i.postimg.cc/fyfBm51N/Chat-GPT-Image-May-9-2025-11-55-13-AM.png",
-  //   level: 1,
-  //   question: {
-  //     "zh-tw": "這是什麼？",
-  //     "en": "What is this?",
-  //     "vn": "Đây là cái gì?",
-  //     "id": "Apa ini?"
-  //   },
-  //   answers: {
-  //     'A': {
-  //       "zh-tw": "量體溫",
-  //       "en": "Measure body temperature",
-  //       "vn": "Đo nhiệt độ cơ thể",
-  //       "id": "Ukur suhu tubuh"    
-  //     },
-  //     'B': {
-  //       "zh-tw": "量血壓",
-  //       "en": "Measure blood pressure",
-  //       "vn": "Đo huyết áp",
-  //       "id": "Ukur tekanan darah"
-  //     },
-  //     'C': {
-  //       "zh-tw": "量身高",
-  //       "en": "Measure height",
-  //       "vn": "Đo chiều cao",
-  //       "id": "Ukur tinggi"
-  //     }
-  //   },
-  //   answer: 'A'
-  // },
-  // {
-  //   image: "https://i.postimg.cc/wTWkztp0/2025-05-09-115738.png",
-  //   level: 1,
-  //   question: {
-  //     "zh-tw": "這是什麼？",
-  //     "en": "What is this?",
-  //     "vn": "Đây là cái gì?",
-  //     "id": "Apa ini?"
-  //   },
-  //   answers: {
-  //     'A': {
-  //       "zh-tw": "好人",
-  //       "en": "Good man",
-  //       "vn": "Người đàn ông tốt",
-  //       "id": "Orang baik"  
-  //     },
-  //     'B': {
-  //       "zh-tw": "行人",
-  //       "en": "Pedestrian",
-  //       "vn": "Đi bộ",
-  //       "id": "Pejalan kaki"
-  //     },
-  //     'C': {
-  //       "zh-tw": "病人",
-  //       "en": "Patient",
-  //       "vn": "Kiên nhẫn",
-  //       "id": "Sabar"
-  //     }
-  //   },
-  //   answer: 'C'
-  // },
-  // {
-  //   image: "https://i.postimg.cc/C5cbw2Wz/Chat-GPT-Image-May-9-2025-11-58-40-AM.png",
-  //   level: 1,
-  //   question: {
-  //     "zh-tw": "這是什麼？",
-  //     "en": "What is this?",
-  //     "vn": "Đây là cái gì?",
-  //     "id": "Apa ini?"
-  //   },
-  //   answers: {
-  //     'A': {
-  //       "zh-tw": "協助如廁",
-  //       "en": "Assist in going to the toilet",
-  //       "vn": "Hỗ trợ đi vệ sinh",
-  //       "id": "Membantu pergi ke toilet"
-  //     },
-  //     'B': {
-  //       "zh-tw": "協助洗澡",
-  //       "en": "Assist in bathing",
-  //       "vn": "Hỗ trợ tắm",
-  //       "id": "Membantu mandi"
-  //     },
-  //     'C': {
-  //       "zh-tw": "協助吃藥",
-  //       "en": "Assist in taking medicine",
-  //       "vn": "Hỗ trợ dùng thuốc",
-  //       "id": "Membantu minum obat"
-  //     }
-  //   },
-  //   answer: 'A'
-  // },
-  // {
-  //   image: "https://i.postimg.cc/mZpc27Pz/2025-05-09-120506.png",
-  //   level: 1,
-  //   question: {
-  //     "zh-tw": "這是什麼？",
-  //     "en": "What is this?",
-  //     "vn": "Đây là cái gì?",
-  //     "id": "Apa ini?"
-  //   },
-  //   answers: {
-  //     'A': {
-  //       "zh-tw": "睡覺",
-  //       "en": "Sleep",
-  //       "vn": "Ngủ",
-  //       "id": "Tidur"
-  //     },
-  //     'B': {
-  //       "zh-tw": "刷牙",
-  //       "en": "Brush teeth",
-  //       "vn": "Chải răng",
-  //       "id": "Sikat gigi"
-  //     },
-  //     'C': {
-  //       "zh-tw": "下棋",
-  //       "en": "Play chess",
-  //       "vn": "Chơi cờ vua",
-  //       "id": "Mainkan catur"
-  //     }
-  //   },
-  //   answer: 'B'
-  // },
-  // {
-  //   image: "https://i.postimg.cc/pTkkLb1k/2025-05-13-000821.png",
-  //   level: 1,
-  //   question: {
-  //     "zh-tw": "這是什麼？",
-  //     "en": "What is this?",
-  //     "vn": "Đây là cái gì?",
-  //     "id": "Apa ini?"
-  //   },
-  //   answers: {
-  //     'A': {
-  //       "zh-tw": "斑馬",
-  //       "en": "Zebra",
-  //       "vn": "Ngựa vằn",
-  //       "id": "Zebra"
-  //     },
-  //     'B': {
-  //       "zh-tw": "工人",
-  //       "en": "Worker",
-  //       "vn": "Công nhân",
-  //       "id": "Pekerja"
-  //     },
-  //     'C': {
-  //       "zh-tw": "病人",
-  //       "en": "Patient",
-  //       "vn": "Kiên nhẫn",
-  //       "id": "Sabar"
-  //     }
-  //   },
-  //   answer: 'C'
-  // },
-  // {
-  //   image: "https://i.postimg.cc/TwGTgSqZ/Chat-GPT-Image-2025-5-13-12-18-58.png",
-  //   level: 1,
-  //   question: {
-  //     "zh-tw": "這是什麼？",
-  //     "en": "What is this?",
-  //     "vn": "Đây là cái gì?",
-  //     "id": "Apa ini?"
-  //   },
-  //   answers: {
-  //     'A': {
-  //       "zh-tw": "助聽器",
-  //       "en": "Hearing aid",
-  //       "vn": "Máy trợ thính",
-  //       "id": "Alat bantu dengar"
-  //     },
-  //     'B': {
-  //       "zh-tw": "耳溫槍",
-  //       "en": "Ear thermometer",
-  //       "vn": "Nhiệt kế tai",
-  //       "id": "Termometer telinga"
-  //     },
-  //     'C': {
-  //       "zh-tw": "水管",
-  //       "en": "Water pipe",
-  //       "vn": "Ống nước",
-  //       "id": "Pipa air"
-  //     }
-  //   },
-  //   answer: 'A'
-  // },
+  {
+    image: "https://i.postimg.cc/m2cs3H8H/Chat-GPT-Image-2025-5-9-11-40-55.png",
+    level: 1,
+    question: {
+      "zh-tw": "這是什麼？",
+      "en": "What is this?",
+      "vn": "Đây là cái gì?",
+      "id": "Apa ini?"
+    },
+    answers: {
+      'A': {
+        "zh-tw": "家屬",
+        "en": "Family members",
+        "vn": "Thành viên gia đình",
+        "id": "Anggota keluarga"    
+      },
+      'B': {
+        "zh-tw": "家禽",
+        "en": "Poultry",
+        "vn": "Gia cầm",
+        "id": "Unggas"
+      },
+      'C': {
+        "zh-tw": "綁架",
+        "en": "Kidnapping",
+        "vn": "Bắt cóc",
+        "id": "Penculikan"
+      }
+    },
+    answer: 'A'
+  },
+  {
+    image: "https://i.postimg.cc/SKR3q03z/Chat-GPT-Image-May-9-2025-11-48-52-AM.png",
+    level: 1,
+    question: {
+      "zh-tw": "這是什麼？",
+      "en": "What is this?",
+      "vn": "Đây là cái gì?",
+      "id": "Apa ini?"
+    },
+    answers: {
+      'A': {
+        "zh-tw": "復健",
+        "en": "Rehabilitation",
+        "vn": "Phục hồi chức năng",
+        "id": "Rehabilitasi"    
+      },
+      'B': {
+        "zh-tw": "量血壓",
+        "en": "Measure blood pressure",
+        "vn": "Đo huyết áp",
+        "id": "Ukur tekanan darah"
+      },
+      'C': {
+        "zh-tw": "輸血",
+        "en": "Blood transfusion",
+        "vn": "Truyền máu",
+        "id": "Transfusi darah"
+      }
+    },
+    answer: 'B'
+  },
+  {
+    image: "https://i.postimg.cc/fyfBm51N/Chat-GPT-Image-May-9-2025-11-55-13-AM.png",
+    level: 1,
+    question: {
+      "zh-tw": "這是什麼？",
+      "en": "What is this?",
+      "vn": "Đây là cái gì?",
+      "id": "Apa ini?"
+    },
+    answers: {
+      'A': {
+        "zh-tw": "量體溫",
+        "en": "Measure body temperature",
+        "vn": "Đo nhiệt độ cơ thể",
+        "id": "Ukur suhu tubuh"    
+      },
+      'B': {
+        "zh-tw": "量血壓",
+        "en": "Measure blood pressure",
+        "vn": "Đo huyết áp",
+        "id": "Ukur tekanan darah"
+      },
+      'C': {
+        "zh-tw": "量身高",
+        "en": "Measure height",
+        "vn": "Đo chiều cao",
+        "id": "Ukur tinggi"
+      }
+    },
+    answer: 'A'
+  },
+  {
+    image: "https://i.postimg.cc/wTWkztp0/2025-05-09-115738.png",
+    level: 1,
+    question: {
+      "zh-tw": "這是什麼？",
+      "en": "What is this?",
+      "vn": "Đây là cái gì?",
+      "id": "Apa ini?"
+    },
+    answers: {
+      'A': {
+        "zh-tw": "好人",
+        "en": "Good man",
+        "vn": "Người đàn ông tốt",
+        "id": "Orang baik"  
+      },
+      'B': {
+        "zh-tw": "行人",
+        "en": "Pedestrian",
+        "vn": "Đi bộ",
+        "id": "Pejalan kaki"
+      },
+      'C': {
+        "zh-tw": "病人",
+        "en": "Patient",
+        "vn": "Kiên nhẫn",
+        "id": "Sabar"
+      }
+    },
+    answer: 'C'
+  },
+  {
+    image: "https://i.postimg.cc/C5cbw2Wz/Chat-GPT-Image-May-9-2025-11-58-40-AM.png",
+    level: 1,
+    question: {
+      "zh-tw": "這是什麼？",
+      "en": "What is this?",
+      "vn": "Đây là cái gì?",
+      "id": "Apa ini?"
+    },
+    answers: {
+      'A': {
+        "zh-tw": "協助如廁",
+        "en": "Assist in going to the toilet",
+        "vn": "Hỗ trợ đi vệ sinh",
+        "id": "Membantu pergi ke toilet"
+      },
+      'B': {
+        "zh-tw": "協助洗澡",
+        "en": "Assist in bathing",
+        "vn": "Hỗ trợ tắm",
+        "id": "Membantu mandi"
+      },
+      'C': {
+        "zh-tw": "協助吃藥",
+        "en": "Assist in taking medicine",
+        "vn": "Hỗ trợ dùng thuốc",
+        "id": "Membantu minum obat"
+      }
+    },
+    answer: 'A'
+  },
+  {
+    image: "https://i.postimg.cc/mZpc27Pz/2025-05-09-120506.png",
+    level: 1,
+    question: {
+      "zh-tw": "這是什麼？",
+      "en": "What is this?",
+      "vn": "Đây là cái gì?",
+      "id": "Apa ini?"
+    },
+    answers: {
+      'A': {
+        "zh-tw": "睡覺",
+        "en": "Sleep",
+        "vn": "Ngủ",
+        "id": "Tidur"
+      },
+      'B': {
+        "zh-tw": "刷牙",
+        "en": "Brush teeth",
+        "vn": "Chải răng",
+        "id": "Sikat gigi"
+      },
+      'C': {
+        "zh-tw": "下棋",
+        "en": "Play chess",
+        "vn": "Chơi cờ vua",
+        "id": "Mainkan catur"
+      }
+    },
+    answer: 'B'
+  },
+  {
+    image: "https://i.postimg.cc/pTkkLb1k/2025-05-13-000821.png",
+    level: 1,
+    question: {
+      "zh-tw": "這是什麼？",
+      "en": "What is this?",
+      "vn": "Đây là cái gì?",
+      "id": "Apa ini?"
+    },
+    answers: {
+      'A': {
+        "zh-tw": "斑馬",
+        "en": "Zebra",
+        "vn": "Ngựa vằn",
+        "id": "Zebra"
+      },
+      'B': {
+        "zh-tw": "工人",
+        "en": "Worker",
+        "vn": "Công nhân",
+        "id": "Pekerja"
+      },
+      'C': {
+        "zh-tw": "病人",
+        "en": "Patient",
+        "vn": "Kiên nhẫn",
+        "id": "Sabar"
+      }
+    },
+    answer: 'C'
+  },
+  {
+    image: "https://i.postimg.cc/TwGTgSqZ/Chat-GPT-Image-2025-5-13-12-18-58.png",
+    level: 1,
+    question: {
+      "zh-tw": "這是什麼？",
+      "en": "What is this?",
+      "vn": "Đây là cái gì?",
+      "id": "Apa ini?"
+    },
+    answers: {
+      'A': {
+        "zh-tw": "助聽器",
+        "en": "Hearing aid",
+        "vn": "Máy trợ thính",
+        "id": "Alat bantu dengar"
+      },
+      'B': {
+        "zh-tw": "耳溫槍",
+        "en": "Ear thermometer",
+        "vn": "Nhiệt kế tai",
+        "id": "Termometer telinga"
+      },
+      'C': {
+        "zh-tw": "水管",
+        "en": "Water pipe",
+        "vn": "Ống nước",
+        "id": "Pipa air"
+      }
+    },
+    answer: 'A'
+  },
   // ======== LEVEL 2 ======== //
   // We don't use Chinese for zh-tw here to prevent cheating
   {

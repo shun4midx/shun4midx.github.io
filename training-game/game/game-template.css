@@ -126,7 +126,7 @@
 
 /* Scrollbar */
 /* WebKit browsers (Chrome, Safari, Edge) */
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 9px;
 }
 
@@ -142,4 +142,4 @@
 ::-webkit-scrollbar-track {
   background-color: var(--scrollbar-track);
   border: none;
-} */
+}
