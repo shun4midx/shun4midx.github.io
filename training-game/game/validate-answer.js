@@ -78,7 +78,7 @@ function nextQuestion() {
     updateQuestionUI();
   } else { // Level up
     const nextLevelQuestions = questions.filter(q => q.level === curr_level + 1);
-    localStorage.setItem("correctAnswers", JSON.stringify("0"));
+    localStorage.setItem("correctAnswers", JSON.stringify(0));
     if (nextLevelQuestions.length > 0) {
       localStorage.setItem("curr_level", JSON.stringify(curr_level + 1));
       genQuestionOrder();
