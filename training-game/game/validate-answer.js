@@ -47,6 +47,13 @@ function checkAnswer(selected) {
     feedback.style.backgroundColor = "#d4edda";
     feedback.style.color = "#155724";
     feedback.style.border = "2px solid #c3e6cb";
+    updateScore(JSON.parse(localStorage.getItem("curr_level")) * 100);
+    // localStorage.setItem("correctAnswers", JSON.stringify(curr_cor + 1));
+    let curr_cor = parseInt(localStorage.getItem("correctAnswers")) || 0; // Convert to a number
+    console.log("Current correctAnswers (before increment):", curr_cor); // Debugging log
+    curr_cor += 1; // Increment
+    localStorage.setItem("correctAnswers", JSON.stringify(curr_cor)); // Store as a number
+    console.log("Current correctAnswers (after increment):", curr_cor); // Debugging log
   } else {
     let wrongAnswerTranslation = getTranslation("wrongAnswer", lang);//`❌ 答錯了，正確答案是 ${correctAnswer} 喔～`;
     wrongAnswerTranslation = wrongAnswerTranslation.replace("${correctAnswer}", correctAnswer);
@@ -64,12 +71,14 @@ function nextQuestion() {
   let curr_order_idx = JSON.parse(localStorage.getItem("curr_order_idx"));
   let question_order = JSON.parse(localStorage.getItem("question_order"));
   let curr_level = JSON.parse(localStorage.getItem("curr_level"));
+  let curr_cor = JSON.parse(localStorage.getItem("correctAnswers")) || 0;
 
-  if (curr_order_idx < question_order.length - 1) { // No need to level up
+  if (curr_order_idx < question_order.length - 1 && ((curr_level == 1 && curr_cor < 6) || (curr_level == 2 && curr_cor < 4) || (curr_level == 3 && curr_cor < 5) || (curr_level == 4 && curr_cor < 5))) { // No need to level up
     localStorage.setItem("curr_order_idx", JSON.stringify(curr_order_idx + 1));
     updateQuestionUI();
   } else { // Level up
     const nextLevelQuestions = questions.filter(q => q.level === curr_level + 1);
+    localStorage.setItem("correctAnswers", JSON.stringify("0"));
     if (nextLevelQuestions.length > 0) {
       localStorage.setItem("curr_level", JSON.stringify(curr_level + 1));
       genQuestionOrder();
@@ -116,6 +125,29 @@ function nextQuestion() {
   // Reset the last selected answer
   lastSelectedAnswer = null;
 }
+
+function updateScoreDisplay() {
+  const score = JSON.parse(localStorage.getItem('score')); // Get the current score
+  document.getElementById('scoreText').textContent = score; // Update the score display
+}
+
+function updateScore(points) {
+  let score = JSON.parse(localStorage.getItem('score')); // Get the current score
+  score += points; // Add points to the score
+  localStorage.setItem('score', JSON.stringify(score)); // Save the updated score
+  updateScoreDisplay(); // Update the score display
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (!localStorage.getItem('score')) {
+    localStorage.setItem('score', JSON.stringify(0)); // Initialize score to 0
+  }
+
+  if (!localStorage.getItem('correctAnswers')) {
+    localStorage.setItem('correctAnswers', JSON.stringify(0)); // Initialize as an empty object
+  }
+  updateScoreDisplay(); // Update the score display on page load
+});
 
 // Window
 window.checkAnswer = checkAnswer;

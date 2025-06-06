@@ -40,6 +40,18 @@ export const translations = {
   }
 };
 
+const placeholders = {
+  'zh-tw': '輸入你的名字', // Traditional Chinese
+  'en': 'Enter your name', // English
+  'vn': 'Nhập tên của bạn', // Vietnamese
+  'id': 'Siapa namamu?', // Indonesian
+};
+
+function updatePlaceholder(language) {
+  const nameInput = document.getElementById('nameInput');
+  nameInput.placeholder = placeholders[language] || 'Enter your name'; // Default to English if language is not found
+}
+
 function setLanguage(lang) {
   localStorage.setItem("language", lang);
   applyLanguage(lang);
@@ -64,6 +76,9 @@ function setLanguage(lang) {
 
   // Update question lang
   updateQuestionLang(lang);
+
+  // Update placeholder
+  updatePlaceholder(lang);
 
   // Rerun checkAnswer if there was a previous selection
   if (lastSelectedAnswer) {

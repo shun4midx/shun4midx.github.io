@@ -15,6 +15,7 @@
   text-wrap: wrap;
   word-wrap: break-word;
   overflow-x: hidden;
+  /* border: 1px solid red !important; */
 }
 
 /* Forcefully prevent hover styling on devices that don't hover */
@@ -77,6 +78,127 @@ body {
 }
 
 /* Top row */
+.HeaderContainer {
+  position: fixed; /* Fix the header at the top */
+  top: 0; /* Align to the top of the screen */
+  left: 0; /* Align to the left edge */
+  width: 100%; /* Full width */
+  z-index: 3000; /* Ensure it stays above other elements */
+  background-color: var(--bg-color); /* Optional background color */
+  padding: 10px 20px; /* Add padding for spacing */
+}
+
+/* Name and Score Section */
+.NameScoreSection {
+  display: flex; /* Use flexbox for horizontal alignment */
+  justify-content: flex-start;
+  align-items: center; /* Vertically center items */
+  margin: 0; /* Match HeaderButtons margin */
+  padding: 0; /* Match HeaderButtons padding */
+}
+
+/* Name and Score spans */
+.NameScoreSection span {
+  font-size: 1.0em; /* Match font size with other buttons */
+  background-color: var(--globe-bg); /* Match background color */
+  border-radius: 10px; /* Rounded corners */
+  padding: 5px 10px; /* Add padding for spacing */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Match shadow effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Pencil icon button */
+.NameButton {
+  margin: 0;
+  padding: 0;
+  position: fixed !important;
+  top: 15px !important; /* Align to the top of the screen */
+  left: 15px !important; /* Start from the left edge */
+  font-size: 3.8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  z-index: 3000;
+  width: 5vh;
+  height: 5vh;
+  color: var(--header-text);
+  overflow: hidden;
+  background-color: var(--globe-bg);
+  border-radius: 10px;
+  transition: background-color 0.15s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.NameButton.clicked {
+  background-color: var(--globe-hover-bg);
+}
+
+/* Name Input Container */
+.NameInputContainer {
+  position: fixed !important;
+  left: 15px !important;
+  top: calc(15px + 5.75vh) !important;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Stack input and button vertically */
+  align-items: flex-start; /* Align items to the left */
+}
+
+.NameInputContainer input {
+  padding: 0;
+  margin-left: 0;
+  left: 15px !important;
+  font-size: 1.0em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 150px; /* Set width for the input field */
+}
+
+.NameInputContainer button {
+  padding: 5px 10px;
+  margin-top: 7px;
+  margin-left: 0;
+  font-size: 1em;
+  /* background-color: var(--globe-bg); */
+  color: var(--header-text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.NameInputContainer button:hover {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+/* Score display */
+.DisplayScore {
+  position: fixed !important;
+  top: 15px !important;
+  left: calc(15px + 5.75vh) !important;
+  height: 5vh;
+  font-size: 3.7vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0 0.5vh;
+  font-weight: bold;
+  color: var(--button-text); /* Match text color */
+  background-color: var(--button-bg); /* Match background color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Match shadow effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .HeaderButtons {
   display: flex;
   justify-content: flex-end;

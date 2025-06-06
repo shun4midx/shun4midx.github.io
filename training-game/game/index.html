@@ -20,10 +20,28 @@
 
 <body>
   <div class="GameBodyWrap">
-    <div class="HeaderButtons">
-      <a href=".." class="HomeButton">🏠</a>
-      <div class="MenuToggle" onclick="toggleMenu()">
-        <span id="globe-text">🌐</span>
+    <div class="HeaderContainer">
+      <!-- Name and Score Section -->
+      <div class="NameScoresection">
+        <div class="NameButton" onclick="toggleNameInput()">
+          <span id="name-text">✏️</span>
+        </div>
+        <div class="DisplayScore">
+          <span id="scoreText" score-key="score-text">0</span>
+        </div>
+      </div>
+
+      <div class="NameInputContainer" style="display: none;">
+        <input type="text" id="nameInput" placeholder="Enter your name"/>
+        <button id="saveNameButton" onclick="saveName()">OK</button>
+      </div>
+
+      <!-- Existing Header Buttons -->
+      <div class="HeaderButtons">
+        <a href=".." class="HomeButton">🏠</a>
+        <div class="MenuToggle" onclick="toggleMenu()">
+          <span id="globe-text">🌐</span>
+        </div>
       </div>
     </div>
 
@@ -67,7 +85,8 @@
   <!-- Main Background Scripts -->
   <script src="../main-scripts/read-write-sheet.js"></script>
   <script src="../main-scripts/language-selection.js"></script>
-  <script src="main-scripts/disable-hover.js"></script>
+  <script src="../main-scripts/disable-hover.js"></script>
+  <script src="../main-scripts/name.js"></script>
   <script type="module" src="../main-scripts/naive-translation.js"></script>
 
   <!-- Game Scripts -->
