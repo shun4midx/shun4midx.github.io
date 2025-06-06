@@ -1,0 +1,84 @@
+<!--
+/********************************************
+* Copyright (c) 2025 Shun/翔海 (@shun4midx) *
+* Project: School Project of Training Game *
+* File Type: HTML file for training game   *
+* File: level-up/index.html                *
+********************************************/
+-->
+
+<!DOCTYPE html>
+<html lang="utf-8">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>清福員工訓練遊戲</title>
+  <link rel="stylesheet" href="../main-template.css"/>
+  <link rel="stylesheet" href="../button-template.css"/>
+  <link rel="stylesheet" href="../home-template.css"/>
+</head>
+
+<body>
+  <div class="HomeBodyWrap">
+    <div class="HeaderContainer">
+      <!-- Name and Score Section -->
+      <div class="NameScoresection">
+        <div class="NameButton" onclick="toggleNameInput()">
+          <span id="name-text">✏️</span>
+        </div>
+        <div class="DisplayScore">
+          <span id="scoreText" score-key="score-text">0</span>
+        </div>
+      </div>
+
+      <div class="NameInputContainer" style="display: none;">
+        <input type="text" id="nameInput" placeholder="Enter your name"/>
+        <button id="saveNameButton" onclick="saveName()">OK</button>
+      </div>
+
+      <!-- Existing Header Buttons -->
+      <div class="HeaderButtons">
+        <a href=".." class="HomeButton">🏠</a>
+        <div class="MenuToggle" onclick="toggleMenu()">
+          <span id="globe-text">🌐</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Language selection container -->
+    <div class="LanguageContainer">
+      <div class="language-zh-tw" onclick="setLanguage('zh-tw')">正體中文</div>
+      <div class="language-abc" onclick="setLanguage('en')">English</div>
+      <div class="language-abc" onclick="setLanguage('vn')">Tiếng Việt</div>
+      <div class="language-abc" onclick="setLanguage('id')">Bahasa Indonesia</div>
+    </div>
+
+    <div class="HomeBody">
+      <div class="HomeTitleWrap">
+        <div class="HomeTitle">
+          <h1 id="homescreen-text"></h1>
+        </div>
+      </div>
+
+      <div class="Button">
+        <a href="../game" class="ButtonLink"><span data-key="start">START!</span></a>
+      </div>
+
+      <div class="ButtonSubtitle">
+        <h2 data-key="levelUp">Press to start level!</h2>
+      </div>
+    
+    </div>
+  </div>
+  <!-- ======== SCRIPTS ======== -->
+  <!-- Typewriter animation -->
+  <script src="level-up-typewriter.js"></script>
+  <script src="../main-scripts/read-write-sheet.js"></script>
+  <script src="../main-scripts/language-selection.js"></script>
+  <script src="../main-scripts/disable-hover.js"></script>
+  <script src="../main-scripts/name.js"></script>
+  <script type="module" src="../main-scripts/naive-translation.js"></script>
+</body>
+
+</html>

@@ -15,28 +15,32 @@ export const translations = {
     startDescription: "按下按鈕就能開始玩遊戲！",
     correctAnswer: "✅ 正確！",
     wrongAnswer: "❌ 答錯了，正確答案是 ${correctAnswer} 喔～",
-    nextQuestion: "下一題"
+    nextQuestion: "下一題",
+    levelUp: "按下按鈕開始玩新的關卡！"
   },
   "en": {
     start: "START!",
     startDescription: "Press to start the game!",
     correctAnswer: "✅ Correct!",
     wrongAnswer: "❌ That's wrong, the correct answer is ${correctAnswer}!",
-    nextQuestion: "Next Question"
+    nextQuestion: "Next Question",
+    levelUp: "Press to start the new level!"
   },
   "vn": {
     start: "BẮT ĐẦU!",
     startDescription: "Nhấn nút để bắt đầu trò chơi!",
     correctAnswer: "✅ Đúng rồi!",
     wrongAnswer: "❌ Sai rồi, câu trả lời đúng là ${correctAnswer}!",
-    nextQuestion: "Câu Hỏi Tiếp Theo"
+    nextQuestion: "Câu Hỏi Tiếp Theo",
+    levelUp: "Nhấn để bắt đầu cấp độ mới!"
   },
   "id": {
     start: "MULAI!",
     startDescription: "Tekan tombol untuk memulai permainan!",
     correctAnswer: "✅ Benar!",
     wrongAnswer: "❌ Itu salah, jawaban yang benar adalah ${correctAnswer}!",
-    nextQuestion: "Pertanyaan Berikutnya"
+    nextQuestion: "Pertanyaan Berikutnya",
+    levelUp: "Tekan untuk memulai level baru!"
   }
 };
 

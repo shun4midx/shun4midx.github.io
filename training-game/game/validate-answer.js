@@ -81,6 +81,7 @@ function nextQuestion() {
       localStorage.setItem("curr_level", JSON.stringify(curr_level + 1));
       genQuestionOrder();
       updateQuestionUI();
+      window.location.href = `../level-up`;
     } else {
       // Start again from the beginning?
       if (localStorage.getItem("language") == "zh-tw") {
@@ -97,6 +98,7 @@ function nextQuestion() {
       localStorage.setItem("curr_level", JSON.stringify(1));
       genQuestionOrder();
       updateQuestionUI();
+      window.location.href = `..`;
     }
   }
 
