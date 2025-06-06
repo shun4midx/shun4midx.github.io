@@ -79,13 +79,17 @@ body {
 
 /* Top row */
 .HeaderContainer {
-  position: fixed; /* Fix the header at the top */
+  position: fixed; /* Fix the header at the top */ 
+  height: 0px !important;
   top: 0; /* Align to the top of the screen */
   left: 0; /* Align to the left edge */
   width: 100%; /* Full width */
   z-index: 3000; /* Ensure it stays above other elements */
   background-color: var(--bg-color); /* Optional background color */
   padding: 10px 20px; /* Add padding for spacing */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 /* Name and Score Section */
