@@ -71,17 +71,17 @@ function nextQuestion() {
   let curr_level = JSON.parse(localStorage.getItem("curr_level"));
   let curr_cor = JSON.parse(localStorage.getItem("correctAnswers")) || 0;
 
-  if (curr_order_idx < question_order.length - 1 && ((curr_level == 1 && curr_cor < 6) || (curr_level == 2 && curr_cor < 4) || (curr_level == 3 && curr_cor < 5) || (curr_level == 4 && curr_cor < 5))) { // No need to level up
+  if (curr_order_idx < question_order.length - 1 && ((curr_level == 1 && curr_cor < 6) || (curr_level == 2 && curr_cor < 4) || (curr_level == 3 && curr_cor < 5))) { // No need to level up
     localStorage.setItem("curr_order_idx", JSON.stringify(curr_order_idx + 1));
     updateQuestionUI();
   } else { // Level up
     const nextLevelQuestions = questions.filter(q => q.level === curr_level + 1);
     localStorage.setItem("correctAnswers", JSON.stringify(0));
     if (nextLevelQuestions.length > 0) {
+      window.location.href = `../level-up`;
       localStorage.setItem("curr_level", JSON.stringify(curr_level + 1));
       genQuestionOrder();
       updateQuestionUI();
-      window.location.href = `../level-up`;
     } else {
       // Start again from the beginning?
       if (localStorage.getItem("language") == "zh-tw") {
@@ -94,11 +94,11 @@ function nextQuestion() {
         alert("Anda menyelesaikan permainan, kami akan mulai lagi!");
       }
 
+      window.location.href = `..`;
       localStorage.setItem("curr_order_idx", JSON.stringify(0));
       localStorage.setItem("curr_level", JSON.stringify(1));
       genQuestionOrder();
       updateQuestionUI();
-      window.location.href = `..`;
     }
   }
 
