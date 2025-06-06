@@ -18,14 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Toggle the visibility of the name input container
   function toggleNameInput() {
     const nameInputContainer = document.querySelector('.NameInputContainer');
-    console.log('Toggling visibility'); // Debugging log
-    console.log('Current display:', nameInputContainer.style.display); // Debugging log
     if (nameInputContainer.style.display === 'none' || nameInputContainer.style.display === '') {
       nameInputContainer.style.display = 'flex'; // Make it visible
-      console.log('NameInputContainer is now visible'); // Debugging log
     } else {
       nameInputContainer.style.display = 'none'; // Hide it
-      console.log('NameInputContainer is now hidden'); // Debugging log
     }
   }
 
