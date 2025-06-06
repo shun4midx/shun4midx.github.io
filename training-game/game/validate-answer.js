@@ -50,10 +50,8 @@ function checkAnswer(selected) {
     updateScore(JSON.parse(localStorage.getItem("curr_level")) * 100);
     // localStorage.setItem("correctAnswers", JSON.stringify(curr_cor + 1));
     let curr_cor = parseInt(localStorage.getItem("correctAnswers")) || 0; // Convert to a number
-    console.log("Current correctAnswers (before increment):", curr_cor); // Debugging log
     curr_cor += 1; // Increment
     localStorage.setItem("correctAnswers", JSON.stringify(curr_cor)); // Store as a number
-    console.log("Current correctAnswers (after increment):", curr_cor); // Debugging log
   } else {
     let wrongAnswerTranslation = getTranslation("wrongAnswer", lang);//`❌ 答錯了，正確答案是 ${correctAnswer} 喔～`;
     wrongAnswerTranslation = wrongAnswerTranslation.replace("${correctAnswer}", correctAnswer);
