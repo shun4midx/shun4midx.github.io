@@ -56,6 +56,12 @@
   --scrollbar-track: rgb(192, 243, 253);
   --scrollbar: rgb(66, 68, 203);
   --scrollbar-hover: rgb(56, 20, 163);
+  --leaderboard-text: white;
+  --leaderboard-border: rgb(192, 243, 253);
+  --leaderboard-grad-top: #0038A8;
+  --leaderboard-grad-bottom: #D80073;
+  --leaderboard-curr-user: rgb(192, 243, 253);
+  --leaderboard-curr-user-text: rgb(66, 68, 203);
 }
 
 /* HTML and Body */
@@ -217,6 +223,29 @@ body {
   padding: 0;
 }
 
+.HomeButton, .LeaderboardButton {
+  position: fixed !important;
+  margin: 0;
+  padding: 0;
+  font-size: 3.8vh;
+  top: 15px !important;
+  right: calc(15px + 2 * 5.75vh) !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  z-index: 3000;
+  width: 5vh;
+  height: 5vh;
+  color: var(--header-text);
+  overflow: hidden;
+  background-color: var(--globe-bg);
+  border-radius: 10px;
+  transition: background-color 0.15s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
 /* Style for home button */
 .HomeButton {
   position: fixed !important;
@@ -241,15 +270,15 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.HomeButton:visited {
+.HomeButton:visited, .LeaderboardButton:visited {
   background-color: var(--globe-bg);
 }
 
-.HomeButton.clicked {
+.HomeButton.clicked, .LeaderboardButton.clicked {
   background-color: var(--globe-hover-bg);
 }
 
-.HomeButton span {
+.HomeButton span, .LeaderboardButton span {
   margin: 0;   /* Remove any margin for the text */
   padding: 0;  /* Remove padding */
   font-size: 1.0em;  /* Set size for the icon */
@@ -263,7 +292,7 @@ body {
   padding: 0;
   font-size: 3.8vh;
   top: 15px !important;
-  right: calc(15px + 11.5vh) !important;
+  right: calc(15px + 3 * 5.75vh) !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;

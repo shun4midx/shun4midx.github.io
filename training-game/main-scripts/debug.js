@@ -7,6 +7,7 @@
 
 import { genQuestionOrder } from '../game/question-navigation.js';
 import { updateQuestionUI } from '../game/display-question.js';
+import { updateSheetScore } from '../main-scripts/read-write-sheet.js';
 
 function updateScoreDisplay() {
   const score = JSON.parse(localStorage.getItem("score")) || 0; // Get the score from localStorage
@@ -22,7 +23,13 @@ function resetGame() {
   localStorage.setItem("curr_order_idx", JSON.stringify(0));
   localStorage.setItem("curr_level", JSON.stringify(1));
   localStorage.setItem("correctAnswers", JSON.stringify(0));
-  
+
+  updateSheetScore(localStorage.getItem("username"), 0, function(res) {
+    if (res.status != 'success') {
+      console.error('Error:', res.message);
+    }
+  });
+
   // UI reset
   genQuestionOrder();
   updateQuestionUI();

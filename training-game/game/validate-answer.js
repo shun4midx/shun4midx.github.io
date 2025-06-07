@@ -8,6 +8,7 @@
 import { questions, genQuestionOrder } from './question-navigation.js';
 import { getTranslation } from '../main-scripts/naive-translation.js';
 import { updateQuestionUI } from './display-question.js';
+import { getSheetScore, updateSheetScore } from '../main-scripts/read-write-sheet.js';
 
 export let lastSelectedAnswer; // Declare the variable
 
@@ -145,8 +146,23 @@ function nextQuestion() {
   lastSelectedAnswer = null;
 }
 
-function updateScoreDisplay() {
-  const score = JSON.parse(localStorage.getItem('score')); // Get the current score
+export function updateScoreDisplay() {
+  // const score = JSON.parse(localStorage.getItem('score')); // Get the current score
+  // Get global score
+  if (!localStorage.getItem("score")) {
+    localStorage.setItem("score", "0");
+  }
+
+  let score = JSON.parse(localStorage.getItem('score'));
+  getSheetScore(localStorage.getItem('username'), function (response) {
+    if (response.status === 'success') {
+      score = response.score;
+    } else {
+      console.error('Error getting score:', response.message);
+    }
+  });
+  
+  localStorage.setItem("score", JSON.stringify(score)); // Set the current score
   document.getElementById('scoreText').textContent = score; // Update the score display
 }
 
@@ -154,7 +170,14 @@ function updateScore(points) {
   let score = JSON.parse(localStorage.getItem('score')); // Get the current score
   score += points; // Add points to the score
   localStorage.setItem('score', JSON.stringify(score)); // Save the updated score
-  updateScoreDisplay(); // Update the score display
+  
+  updateSheetScore(localStorage.getItem("username"), score, function(res) {
+    if (res.status != 'success') {
+      console.error('Error:', res.message);
+    }
+  });
+
+  updateScoreDisplay();
 }
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -7,6 +7,7 @@
 
 import { questions } from './question-navigation.js';
 import { translations } from '../main-scripts/naive-translation.js';      
+import { updateScoreDisplay } from './validate-answer.js';
 
 export function updateQuestionUI() {
   // Get the current question

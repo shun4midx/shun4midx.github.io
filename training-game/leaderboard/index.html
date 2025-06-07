@@ -3,7 +3,7 @@
 * Copyright (c) 2025 Shun/翔海 (@shun4midx) *
 * Project: School Project of Training Game *
 * File Type: HTML file for training game   *
-* File: /game/index.html                   *
+* File: leaderboard/index.html             *
 ********************************************/
 -->
 
@@ -14,12 +14,14 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>清福員工訓練遊戲</title>
-  <link rel="stylesheet" href="../main-template.css"/> <!-- Includes the language customization in the corner, probably would include login functionality later too -->
-  <link rel="stylesheet" href="game-template.css"/>
+  <link rel="stylesheet" href="../main-template.css"/>
+  <link rel="stylesheet" href="../button-template.css"/>
+  <link rel="stylesheet" href="../home-template.css"/>
+  <link rel="stylesheet" href="leaderboard-template.css"/>
 </head>
 
 <body>
-  <div class="GameBodyWrap">
+  <div class="HomeBodyWrap">
     <div class="HeaderContainer">
       <!-- Name and Score Section -->
       <div class="NameScoresection">
@@ -38,10 +40,10 @@
 
       <!-- Existing Header Buttons -->
       <div class="HeaderButtons">
-        <div class="ResetButton" onclick="resetGame()">
+        <div class="ResetButton" onclick="refreshLeaderboard()">
           <span id="reset-text">🔄</span>
         </div>
-        <a href="../leaderboard" class="LeaderboardButton">📊</a>
+        <a href="" class="LeaderboardButton">📊</a>
         <a href=".." class="HomeButton">🏠</a>
         <div class="MenuToggle" onclick="toggleMenu()">
           <span id="globe-text">🌐</span>
@@ -57,38 +59,27 @@
       <div class="language-abc" onclick="setLanguage('id')">Bahasa Indonesia</div>
     </div>
 
-    <div class="GameBody">
-      <!-- Game Content (Image + Answers) -->
-      <div class="GameContent">
-        <!-- Display the question image -->
-        <div class="GameImage">
-          <img src="" style="visibility: hidden;" width="300"/>
+    <div class="HomeBody">
+      <div class="LeaderboardContainer">
+        <div class="LeaderboardTitle" data-key="leaderboard"></div>
+        <div class="LeaderboardScrollWrapper">
+          <table class="LeaderboardTable">
+            <thead>
+              <tr>
+                <th data-key="rank"></th>
+                <th data-key="name"></th>
+                <th data-key="score"></th>
+                <th data-key="lastEditedDate"></th>
+              </tr>
+            </thead>
+            <tbody id="leaderboardBody">
+              <!-- User rows injected here -->
+            </tbody>
+          </table>
         </div>
-
-        <!-- Display question -->
-        <div class="Question">
-          <h1 question-key="questionText"></h1>
-        </div>
-
-        <!-- Answers Section -->
-        <div class="Answers">
-          <div id="feedback" class="FeedbackMessage"></div>
-
-          <div class="AnswerOption" style="visibility: hidden;" onclick="checkAnswer('A')" question-key="answerA"></div>
-          <div class="AnswerOption" style="visibility: hidden;" onclick="checkAnswer('B')" question-key="answerB"></div>
-          <div class="AnswerOption" style="visibility: hidden;" onclick="checkAnswer('C')" question-key="answerC"></div>
-          <div class="AnswerOption" style="visibility: hidden;" onclick="checkAnswer('D')" question-key="answerD"></div>
-
-          <!-- Continue Button (initially hidden) -->
-          <button id="continue-button" class="ContinueButton" style="display: none;" onclick="nextQuestion()" data-key="nextQuestion">下一題</button>
-        </div>
-      </div>
+      </div>      
     </div>
   </div>
-
-  <!-- Full-screen overlay -->
-  <div class="RedirectOverlay" id="redirect-overlay"></div>
-
   <!-- ======== SCRIPTS ======== -->
   <!-- Main Background Scripts -->
   <script type="module" src="../main-scripts/read-write-sheet.js"></script>
@@ -98,10 +89,8 @@
   <script type="module" src="../main-scripts/debug.js"></script>
   <script type="module" src="../main-scripts/naive-translation.js"></script>
 
-  <!-- Game Scripts -->
-  <script type="module" src="question-navigation.js"></script>
-  <script type="module" src="validate-answer.js"></script>
-  <script type="module" src="display-question.js"></script>
+  <!-- Leaderboard Scripts -->
+  <script type="module" src="leaderboard.js"></script>
 </body>
 
 </html>

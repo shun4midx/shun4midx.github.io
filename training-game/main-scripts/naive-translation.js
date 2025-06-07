@@ -16,7 +16,14 @@ export const translations = {
     correctAnswer: "✅ 正確！",
     wrongAnswer: "❌ 答錯了，正確答案是 ${correctAnswer} 喔～",
     nextQuestion: "下一題",
-    levelUp: "按下按鈕開始玩新的關卡！"
+    levelUp: "按下按鈕開始玩新的關卡！",
+    usernameUsed: "請選擇另外一個名字。",
+    usernameChanged: "改名成功！",
+    leaderboard: "🏆 排行榜 🏆",
+    rank: "排名",
+    name: "名字",
+    score: "分數",
+    lastEditedDate: "最後更新日期"
   },
   "en": {
     start: "START!",
@@ -24,7 +31,14 @@ export const translations = {
     correctAnswer: "✅ Correct!",
     wrongAnswer: "❌ That's wrong, the correct answer is ${correctAnswer}!",
     nextQuestion: "Next Question",
-    levelUp: "Press to start the new level!"
+    levelUp: "Press to start the new level!",
+    usernameUsed: "Please choose another name.",
+    usernameChanged: "Name successfully changed!",
+    leaderboard: "🏆 Leaderboard 🏆",
+    rank: "Rank",
+    name: "Name",
+    score: "Score",
+    lastEditedDate: "Last Edited Date"
   },
   "vn": {
     start: "BẮT ĐẦU!",
@@ -32,7 +46,14 @@ export const translations = {
     correctAnswer: "✅ Đúng rồi!",
     wrongAnswer: "❌ Sai rồi, câu trả lời đúng là ${correctAnswer}!",
     nextQuestion: "Câu Hỏi Tiếp Theo",
-    levelUp: "Nhấn để bắt đầu cấp độ mới!"
+    levelUp: "Nhấn để bắt đầu cấp độ mới!",
+    usernameUsed: "Vui lòng chọn tên mới.",
+    usernameChanged: "Đã đổi tên thành công!",
+    leaderboard: "🏆 Bảng Xếp Hạng 🏆",
+    rank: "Thứ Hạng",
+    name: "Tên",
+    score: "Ngày Chỉnh Sửa Lần Cuối",
+    lastEditedDate: "Last Edited Date"
   },
   "id": {
     start: "MULAI!",
@@ -40,7 +61,14 @@ export const translations = {
     correctAnswer: "✅ Benar!",
     wrongAnswer: "❌ Itu salah, jawaban yang benar adalah ${correctAnswer}!",
     nextQuestion: "Pertanyaan Berikutnya",
-    levelUp: "Tekan untuk memulai level baru!"
+    levelUp: "Tekan untuk memulai level baru!",
+    usernameUsed: "Silakan pilih nama baru.",
+    usernameChanged: "Nama berhasil diubah!",
+    leaderboard: "🏆 Papan Peringkat 🏆",
+    rank: "Pangkat",
+    name: "Nama",
+    score: "Skor",
+    lastEditedDate: "Tanggal Yang Diedit Terakhir"
   }
 };
 
