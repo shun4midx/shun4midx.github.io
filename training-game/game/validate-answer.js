@@ -105,11 +105,19 @@ function nextQuestion() {
         alert("Anda menyelesaikan permainan, kami akan mulai lagi!");
       }
 
-      window.location.href = `..`;
+      // Block screen
+      overlay.style.display = "block";
+
+      // Process data
       localStorage.setItem("curr_order_idx", JSON.stringify(0));
       localStorage.setItem("curr_level", JSON.stringify(1));
       genQuestionOrder();
       updateQuestionUI();
+
+      // Restart welcome screen
+      setTimeout(() => {
+        window.location.href = `..`;
+      }, 500);
     }
   }
 
