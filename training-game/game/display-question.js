@@ -97,4 +97,5 @@ export function updateQuestionUI() {
 // On page load
 document.addEventListener("DOMContentLoaded", () => {
   updateQuestionUI();
+  updateScoreDisplay();
 });

@@ -256,6 +256,45 @@ body {
   color: var(--header-text);  /* Set the text color */
 }
 
+/* Reset button */
+.ResetButton {
+  position: fixed !important;
+  margin: 0;
+  padding: 0;
+  font-size: 3.8vh;
+  top: 15px !important;
+  right: calc(15px + 11.5vh) !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  z-index: 3000;
+  width: 5vh;
+  height: 5vh;
+  color: var(--header-text);
+  overflow: hidden;
+  background-color: var(--globe-bg);
+  border-radius: 10px;
+  transition: background-color 0.15s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.ResetButton:visited {
+  background-color: var(--globe-bg);
+}
+
+.ResetButton.clicked {
+  background-color: var(--globe-hover-bg);
+}
+
+.ResetButton span {
+  margin: 0;   /* Remove any margin for the text */
+  padding: 0;  /* Remove padding */
+  font-size: 1.0em;  /* Set size for the icon */
+  color: var(--header-text);  /* Set the text color */
+}
+
 /* Globe menu button */
 .MenuToggle {
   position: fixed !important;
