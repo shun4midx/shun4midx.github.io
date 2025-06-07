@@ -65,6 +65,9 @@ function checkAnswer(selected) {
 
 // Placeholder, may move to different file
 function nextQuestion() {
+  // Overlay
+  const overlay = document.getElementById("redirect-overlay");
+
   // Choose the next question
   let curr_order_idx = JSON.parse(localStorage.getItem("curr_order_idx"));
   let question_order = JSON.parse(localStorage.getItem("question_order"));
@@ -78,10 +81,18 @@ function nextQuestion() {
     const nextLevelQuestions = questions.filter(q => q.level === curr_level + 1);
     localStorage.setItem("correctAnswers", JSON.stringify(0));
     if (nextLevelQuestions.length > 0) {
-      window.location.href = `../level-up`;
+      // Block screen
+      overlay.style.display = "block";
+
+      // Reset data
       localStorage.setItem("curr_level", JSON.stringify(curr_level + 1));
       genQuestionOrder();
       updateQuestionUI();
+
+      // Level up screen
+      setTimeout(() => {
+        window.location.href = `../level-up`;
+      }, 500);
     } else {
       // Start again from the beginning?
       if (localStorage.getItem("language") == "zh-tw") {

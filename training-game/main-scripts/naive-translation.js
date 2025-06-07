@@ -45,7 +45,7 @@ export const translations = {
 };
 
 const placeholders = {
-  'zh-tw': '輸入你的名字', // Traditional Chinese
+  'zh-tw': '請輸入你的名字', // Traditional Chinese
   'en': 'Enter your name', // English
   'vn': 'Nhập tên của bạn', // Vietnamese
   'id': 'Siapa namamu?', // Indonesian

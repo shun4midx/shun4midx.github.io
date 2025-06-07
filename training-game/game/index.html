@@ -70,7 +70,7 @@
         <div class="Answers">
           <div id="feedback" class="FeedbackMessage"></div>
 
-          <div class="AnswerOption" style="visibility: hidden" onclick="checkAnswer('A')" question-key="answerA"></div>
+          <div class="AnswerOption" style="visibility: hidden;" onclick="checkAnswer('A')" question-key="answerA"></div>
           <div class="AnswerOption" style="visibility: hidden;" onclick="checkAnswer('B')" question-key="answerB"></div>
           <div class="AnswerOption" style="visibility: hidden;" onclick="checkAnswer('C')" question-key="answerC"></div>
           <div class="AnswerOption" style="visibility: hidden;" onclick="checkAnswer('D')" question-key="answerD"></div>
@@ -81,6 +81,10 @@
       </div>
     </div>
   </div>
+
+  <!-- Full-screen overlay -->
+  <div class="RedirectOverlay" id="redirect-overlay"></div>
+
   <!-- ======== SCRIPTS ======== -->
   <!-- Main Background Scripts -->
   <script src="../main-scripts/read-write-sheet.js"></script>

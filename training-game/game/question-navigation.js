@@ -1243,7 +1243,7 @@ export function genQuestionOrder() {
     .map((question, idx) => ({ question, idx })) // Include the original index
     .filter(q => q.question.level === JSON.parse(localStorage.getItem("curr_level"))); // Filter by level
 
-  const questionOrder = (JSON.parse(localStorage.getItem("curr_level")) != 3) ? shuffleArray(level_questions.map(q => q.idx)) : level_questions.map(q => q.idx); // Shuffle the original indices
+  const questionOrder = shuffleArray(level_questions.map(q => q.idx)); // Shuffle the original indices
 
   // Store
   localStorage.setItem("question_order", JSON.stringify(questionOrder));
