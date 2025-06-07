@@ -20,6 +20,8 @@ function updateScoreDisplay() {
 function resetGame() {
   // Reset
   localStorage.setItem("score", JSON.stringify(0));
+  updateScoreDisplay();
+  
   localStorage.setItem("curr_order_idx", JSON.stringify(0));
   localStorage.setItem("curr_level", JSON.stringify(1));
   localStorage.setItem("correctAnswers", JSON.stringify(0));
@@ -33,7 +35,6 @@ function resetGame() {
   // UI reset
   genQuestionOrder();
   updateQuestionUI();
-  updateScoreDisplay();
 }
 
 function resetGameLevelUp() {
