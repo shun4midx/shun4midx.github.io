@@ -52,8 +52,8 @@ export const translations = {
     leaderboard: "🏆 Bảng Xếp Hạng 🏆",
     rank: "Thứ Hạng",
     name: "Tên",
-    score: "Ngày Chỉnh Sửa Lần Cuối",
-    lastEditedDate: "Last Edited Date"
+    score: "Điểm",
+    lastEditedDate: "Ngày Chỉnh Sửa Lần Cuối"
   },
   "id": {
     start: "MULAI!",
